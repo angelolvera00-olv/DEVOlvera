@@ -14,18 +14,20 @@
 
 <body>
     <header class="header">
-        <a href="#" class="logo"><img src="public/images/letrasLogoBlank2.png" alt=""></a>
+        <a href="#" class="logo"><img src="images/letrasLogoBlank2.png" alt=""></a>
+
+
         <nav class="navbar">
-            <a href="#" class="active">Inicio</a>
-            <a href="#">Acerca de</a>
-            <a href="#">Tecnologias</a>
-            <a href="#">Proyectos</a>
-            <a href="#">Contacto</a>
+            <a href="#home" class="active">Inicio</a>
+            <a href="#about">Acerca de</a>
+            <a href="#skills">Tecnologias</a>
+            <a href="#projects">Proyectos</a>
+            <a href="#contact">Contacto</a>
         </nav>
     </header>
 
 
-    <section class="home">
+    <section class="home" id="home">
         <div class="home-content">
             <h1>Hola, soy Angel Olvera</h1>
             <h2>Desarrollador Web Full Stack</h2>
@@ -39,7 +41,7 @@
     </section>
 
 
-    <section class="about">
+    <section class="about" id="about">
         <div class="aboutContent">
             <h2>Acerca de mí</h2>
             <p>Ingeniero en Tecnologías de la información egresado del Tecnológico de Monterrey. Me especializo en el
@@ -53,67 +55,141 @@
         </div>
     </section>
 
-    <section class="skills">
+    <section class="skills" id="skills">
 
         <h2>Tecnologias usadas</h2>
         <div class="skills-category">
             <h3>Frontend</h3>
             <div class="skills-grid">
                 <div class="skill-card">
-                    <img src="/public/images/html5.png" alt="">
+                    <img src="images/html5.png" alt="">
                     <span>HTML5</span>
                 </div>
                 <div class="skill-card">
-                    <img src="/public/images/css2.png" alt="">
+                    <img src="images/css2.png" alt="">
                     <span>CSS3</span>
                 </div>
                 <div class="skill-card">
-                    <img src="/public/images/javascript.jpg" alt="">
+                    <img src="images/javascript.png" alt="">
                     <span>JavaScript</span>
                 </div>
-                <li>JavaScript</li>
-                <li>Bootstrap</li>
-
+                <div class="skill-card">
+                    <img src="images/bootstrap.png" alt="">
+                    <span>Bootstrap</span>
+                </div>
             </div>
         </div>
-        <h3>Backend</h3>
-        <ul>
-            <li>Node.js</li>
-            <li>Express.js</li>
-            <li>EJS</li>
-            <li>REST APIs</li>
-            <li>JSON</li>
-        </ul>
-        <h3>Bases de Datos</h3>
-        <ul>
-            <li>MongoDB</li>
-            <li>Microsoft SQL Server</li>
-        </ul>
-        <h3>Herramientas</h3>
-        <ul>
-            <li>Git & GitHub</li>
-            <li>VS Code</li>
-            <li>NPM</li>
-        </ul>
 
-
+        <div class="skills-category">
+            <h3>Backend</h3>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <img src="images/node.svg" alt="">
+                    <span>Node.js</span>
+                </div>
+                <div class="skill-card">
+                    <img src="images/express.png" alt="">
+                    <span>Express.js</span>
+                </div>
+                <div class="skill-card">
+                    <img src="images/ejs.jpg" alt="">
+                    <span>EJS</span>
+                </div>
+                <div class="skill-card">
+                    <img src="images/rest.png" alt="">
+                    <span>REST APIs</span>
+                </div>
+                <div class="skill-card">
+                    <img src="images/json.png" alt="">
+                    <span>JSON</span>
+                </div>
+            </div>
+        </div>
+        <div class="skills-category">
+            <h3>Bases de Datos</h3>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <img src="images/mongodb.svg" alt="">
+                    <span>MongoDB</span>
+                </div>
+                <div class="skill-card">
+                    <img src="images/msqlserver.png" alt="">
+                    <span>Microsoft SQL Server</span>
+                </div>
+            </div>
+        </div>
+        <div class="skills-category">
+            <h3>Herramientas</h3>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <img src="images/github.svg" alt="">
+                    <span>Git & Github</span>
+                </div>
+                <div class="skill-card">
+                    <img src="images/vscode.png" alt="">
+                    <span>VS Code</span>
+                </div>
+                <div class="skill-card">
+                    <img src="images/npm.png" alt="">
+                    <span>NPM</span>
+                </div>
+            </div>
+        </div>
     </section>
-    <h2>Proyectos</h2>
-    <ul>
-        <li><a href="https://rifas-para-ti.vercel.app/">Rifas Para ti</a>
-            <p>Aplicación web desarrollada con Node.js y Express que permite la creación y gestión de rifas digitales.
-                Incluye registro de participantes, validacion de boletos, control de disponibilidad en tiempo real y
-                persistencia de datos. Tecnologias utilizadas: Node.js, Express, MongoDB, EJS, Bootstrap. </p>
-        </li>
-    </ul>
 
-    <h2>Medios de contacto</h2>
-    <ul>
-        <li><a href="https://www.linkedin.com/in/angel-olvera-2a286330b/">LinkedIn</a></li>
-        <li><a href="https://www.facebook.com/angelolvera00">Facebook</a></li>
-        <li><a href="mailto:angelolvera00@gmail.com?Subject=Asunto">Email</a></li>
-        <li><a href="https://www.instagram.com/angelolvera00/">Instagram</a></li>
-    </ul>
+
+
+
+    <section class="projects" id="projects">
+        <h2>Proyectos</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <h3>Rifas Para Ti</h3>
+                <p>Aplicación web desarrollada con Node.js y Express que permite la creación y gestión de rifas
+                    digitales.
+                    Incluye registro de participantes, validacion de boletos, control de disponibilidad en tiempo real y
+                    persistencia de datos.</p>
+
+                <div class="project-tech">
+                    <span>Node.js</span>
+                    <span>Express</span>
+                    <span>MongoDB</span>
+                    <span>EJS</span>
+                    <span>Bootstrap</span>
+                </div>
+                <a href="https://rifas-para-ti.vercel.app/" target="_blank" class="project-btn">Ver Proyecto</a>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="contact" id="contact">
+        <h2>Medios de contacto </h2>
+        <div class="contact-grid">
+            <a href="https://www.linkedin.com/in/angel-olvera-2a286330b/" target="_blank" class="contact-card"> <img
+                    src="images/linkedin.png" alt="">
+                <span>LinkedIn</span>
+            </a>
+
+            <a href="https://www.facebook.com/angelolvera00" target="_blank" class="contact-card"> <img
+                    src="images/facebook.png" alt="">
+                <span>Facebook</span>
+            </a>
+            <a href="mailto:angelolvera00@gmail.com?Subject=Asunto" target="_blank" class="contact-card"> <img
+                    src="images/email.jpg" alt="">
+                <span>Email</span>
+            </a>
+            <a href="https://www.instagram.com/angelolvera00/" target="_blank" class="contact-card"> <img
+                    src="images/instagram.png" alt="">
+                <span>Instagram</span>
+            </a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy 2026 Angel Olvera | Desarrollador Web</p>
+    </footer>
+
 </body>
 
 </html>
