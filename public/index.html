@@ -18,23 +18,24 @@
 
 
         <nav class="navbar">
-            <a href="#home" class="active">Inicio</a>
-            <a href="#about">Acerca de</a>
-            <a href="#skills">Tecnologias</a>
-            <a href="#projects">Proyectos</a>
-            <a href="#contact">Contacto</a>
+            <a href="#home" data-key="navHome" class="active"></a>
+            <a href="#about" data-key="navAbout"></a>
+            <a href="#skills" data-key="navSkills"></a>
+            <a href="#projects" data-key="navProjects"></a>
+            <a href="#contact" data-key="navContact"></a>
         </nav>
+
+        <button id="lang-toggle">EN</button>
     </header>
 
 
     <section class="home" id="home">
         <div class="home-content">
-            <h1>Hola, soy Angel Olvera</h1>
-            <h2>Desarrollador Web Full Stack</h2>
-            <p>Desarrollo aplicaciones web completas utilizando JavaScript, Node.js y bases de datos modernas,
-                enfocándome en soluciones eficientes y bien estructuradas.</p>
+            <h1 data-key="homeName"></h1>
+            <h2 data-key="homeTitle"></h2>
+            <p data-key="homeP"></p>
             <div class="btn-box">
-                <a href="https://wa.me/+528332392229">Contáctame</a>
+                <a href="https://wa.me/+528332392229" data-key="homeContact"></a>
             </div>
         </div>
         <span class="home-imgHover"></span>
@@ -43,21 +44,16 @@
 
     <section class="about" id="about">
         <div class="aboutContent">
-            <h2>Acerca de mí</h2>
-            <p>Ingeniero en Tecnologías de la información egresado del Tecnológico de Monterrey. Me especializo en el
-                desarrollo
-                de aplicaciones web utilizando tecnologías como JavaScript, Node.js y bases de datos relacionales y no
-                relacionales.</p>
+            <h2 data-key="aboutMe">Acerca de mí</h2>
+            <p data-key="aboutInfo"></p>
 
-            <p>Disfruto crear soluciones funcionales, optimizar procesos y aprender constantemente nuevas tecnologías.
-                Mi
-                enfoque está en desarrollar sistemas claros, eficientes y escalables.</p>
+            <p data-key="aboutInfo2"></p>
         </div>
     </section>
 
     <section class="skills" id="skills">
 
-        <h2>Tecnologias usadas</h2>
+        <h2 data-key="skillsUsed"></h2>
         <div class="skills-category">
             <h3>Frontend</h3>
             <div class="skills-grid">
@@ -106,7 +102,7 @@
             </div>
         </div>
         <div class="skills-category">
-            <h3>Bases de Datos</h3>
+            <h3 data-key="skillsDB"></h3>
             <div class="skills-grid">
                 <div class="skill-card">
                     <img src="images/mongodb.svg" alt="">
@@ -119,7 +115,7 @@
             </div>
         </div>
         <div class="skills-category">
-            <h3>Herramientas</h3>
+            <h3 data-key="skillsTools"></h3>
             <div class="skills-grid">
                 <div class="skill-card">
                     <img src="images/github.svg" alt="">
@@ -141,14 +137,11 @@
 
 
     <section class="projects" id="projects">
-        <h2>Proyectos</h2>
+        <h2 data-key="projects"></h2>
         <div class="projects-grid">
             <div class="project-card">
                 <h3>Rifas Para Ti</h3>
-                <p>Aplicación web desarrollada con Node.js y Express que permite la creación y gestión de rifas
-                    digitales.
-                    Incluye registro de participantes, validacion de boletos, control de disponibilidad en tiempo real y
-                    persistencia de datos.</p>
+                <p data-key="projectDescription"></p>
 
                 <div class="project-tech">
                     <span>Node.js</span>
@@ -157,13 +150,11 @@
                     <span>EJS</span>
                     <span>Bootstrap</span>
                 </div>
-                <a href="https://rifas-para-ti.vercel.app/" target="_blank" class="project-btn">Ver Proyecto</a>
+                <a href="https://rifas-para-ti.vercel.app/" target="_blank" class="project-btn" data-key="checkProject"></a>
             </div>
             <div class="project-card">
                 <h3>OLCADent</h3>
-                <p>Landing Page corporativa para un consultorio dental. Su objetivo principal es informar sobre los
-                    tratamientos ofrecidos, facilitar la ubicación del consultorio y proporcionar medios de contacto
-                    para agendar citas.</p>
+                <p data-key="projectDescription2"></p>
 
                 <div class="project-tech">
                     <span>HTML5</span>
@@ -172,14 +163,14 @@
                     <span>EJS</span>
                     <span>Bootstrap</span>
                 </div>
-                <a href="https://olcadent.vercel.app/" target="_blank" class="project-btn">Ver Proyecto</a>
+                <a href="https://olcadent.vercel.app/" target="_blank" class="project-btn" data-key="checkProject"></a>
             </div>
         </div>
     </section>
 
 
     <section class="contact" id="contact">
-        <h2>Medios de contacto </h2>
+        <h2 data-key="contactInfo"></h2>
         <div class="contact-grid">
             <a href="https://www.linkedin.com/in/angel-olvera-2a286330b/" target="_blank" class="contact-card"> <img
                     src="images/linkedin.png" alt="">
@@ -205,6 +196,38 @@
         <p>&copy 2026 Angel Olvera | Desarrollador Web</p>
     </footer>
 
+
+
+
+    <script>
+        let currentLang = localStorage.getItem("language") || "es";
+
+        fetch("translations.json")
+            .then(response => response.json())
+            .then(translations => {
+
+                function setLanguage(lang) {
+                    document.querySelectorAll("[data-key]").forEach(element => {
+                        const key = element.getAttribute("data-key");
+                        element.textContent = translations[lang][key];
+                    });
+
+                    localStorage.setItem("language", lang);
+                    currentLang = lang; 
+                }
+
+                setLanguage(currentLang);
+
+                const langBtn = document.getElementById("lang-toggle");
+                langBtn.addEventListener("click", () => {
+                    const newLang = currentLang === "es" ? "en" : "es";
+                    setLanguage(newLang);
+                    currentLang=newLang;
+                    langBtn.textContent = newLang === "es" ? "EN" : "ES";
+                });
+
+            });
+    </script>
 </body>
 
 </html>

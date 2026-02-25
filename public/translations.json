@@ -1,0 +1,47 @@
+{
+    "es": {
+        "navHome": "Inicio",
+        "navAbout": "Acerca de",
+        "navSkills": "Tecnologías",
+        "navProjects": "Proyectos",
+        "navContact": "Contacto",
+        "homeName": "Hola, soy Angel Olvera",
+        "homeTitle": "Desarrollador Web Full Stack",
+        "homeP": "Desarrollo aplicaciones web completas utilizando JavaScript, Node.js y bases de datos modernas, enfocándome en soluciones eficientes y bien estructuradas.",
+        "homeContact": "Contáctame",
+        "aboutMe": "Acerca de mí",
+        "aboutInfo": "Ingeniero en Tecnologías de la información egresado del Tecnológico de Monterrey. Me especializo en el desarrollo de aplicaciones web utilizando tecnologías como JavaScript, Node.js y bases de datos relacionales y no relacionales.",
+        "aboutInfo2": "Disfruto crear soluciones funcionales, optimizar procesos y aprender constantemente nuevas tecnologías. Mi enfoque está en desarrollar sistemas claros, eficientes y escalables.",
+        "skillsUsed":"Tecnologias usadas",
+        "skillsDB":"Bases de Datos",
+        "skillsTools":"Herramientas",
+        "projects":"Proyectos",
+        "projectDescription":"Aplicación web desarrollada con Node.js y Express que permite la creación y gestión de rifasdigitales. Incluye registro de participantes, validacion de boletos, control de disponibilidad en tiempo real y persistencia de datos.",
+        "checkProject":"Ver Proyecto",
+        "projectDescription2":"Landing Page corporativa para un consultorio dental. Su objetivo principal es informar sobre los tratamientos ofrecidos, facilitar la ubicación del consultorio y proporcionar medios de contacto para agendar citas.",
+        "contactInfo":"Medios de Contacto"
+
+    },
+    "en": {
+        "navHome": "Home",
+        "navAbout": "About",
+        "navSkills": "Technologies",
+        "navProjects": "Projects",
+        "navContact": "Contact",
+        "homeName": "Hi, I'm Angel Olvera",
+        "homeTitle": "Full Stack Web Developer",
+        "homeP": "I develop complete web applications using JavaScript, Node.js, and modern databases, focusing on efficient and well-structured solutions.",
+        "homeContact": "Contact me",
+        "aboutMe": "About me",
+        "aboutInfo": "Information Technology Engineer, graduated from Tecnológico de Monterrey, I specialize in web application development using technologies such as JavaScript, Node.js, and both relational and non-relational databases.",
+        "aboutInfo2": "I enjoy creating functional solutions, optimizing processes, and continuously learning new technologies. My focus is on building clear, efficient, and scalable systems.",
+        "skillsUsed":"Technologies Used",
+        "skillsDB":"Databases",
+        "skillsTools":"Tools",
+        "projects":"Projects",
+        "projectDescription": "Web application developed with Node.js and Express that enables the creation and management of digital raffles. It includes participant registration, ticket validation, real-time availability control, and data persistence.",
+        "checkProject":"Check Project",
+        "projectDescription2": "Corporate landing page for a dental clinic. Its main purpose is to provide information about the treatments offered, facilitate the clinic’s location, and provide contact options for scheduling appointments.",
+        "contactInfo":"Contact Info"
+    }
+}
